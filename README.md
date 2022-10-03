@@ -1,6 +1,6 @@
 # action-supported-legacy-versions
 
-Get the backend versions the app will run on except the latest one
+Github aciton for getting the backend versions the app will run on except the latest one
 
 ## Inputs
 
@@ -16,7 +16,7 @@ The DHIS2 username for authentication. Required if maxDHIS2Version is not specif
 
 The DHIS2 password for authentication. Required if maxDHIS2Version is not specified in d2.config
 
-### `config-dir``
+### `config-dir`
 
 Optionally specifiy a relative directory for the d2.config file
 

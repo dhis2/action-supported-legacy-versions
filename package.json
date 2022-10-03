@@ -1,7 +1,7 @@
 {
-    "name": "action-applicable-released-versions",
+    "name": "action-supported-legacy-versions",
     "version": "1.0.0",
-    "description": "Github action for computing the applicable released backend versions the app should run on",
+    "description": "Github aciton for getting the backend versions the app will run on except the latest one",
     "main": "index.js",
     "scripts": {
         "build-legacy-versions": "ncc build ./.github/actions/legacy-versions/index.js -o ./.github/actions/legacy-versions/dist  --license licenses.txt",
@@ -12,7 +12,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/JoakimSM/action-applicable-released-versions.git"
+        "url": "git+https://github.com/dhis2/action-supported-legacy-versions.git"
     },
     "keywords": [
         "frontend",
@@ -21,9 +21,9 @@
     "author": "Joakim Storloekken Melseth",
     "license": "BSD-3-Clause",
     "bugs": {
-        "url": "https://github.com/JoakimSM/action-applicable-released-versions/issues"
+        "url": "https://github.com/dhis2/action-supported-legacy-versions/issues"
     },
-    "homepage": "https://github.com/JoakimSM/action-applicable-released-versions#readme",
+    "homepage": "https://github.com/dhis2/action-supported-legacy-versions#readme",
     "dependencies": {},
     "devDependencies": {
         "@actions/core": "^1.9.1",
