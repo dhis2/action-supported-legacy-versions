@@ -1,0 +1,33 @@
+{
+    "name": "action-applicable-released-versions",
+    "version": "1.0.0",
+    "description": "Github action for computing the applicable released backend versions the app should run on",
+    "main": "index.js",
+    "scripts": {
+        "build-legacy-versions": "ncc build ./.github/actions/legacy-versions/index.js -o ./.github/actions/legacy-versions/dist  --license licenses.txt",
+        "build-precheck-max-version": "ncc build ./.github/actions/precheck-max-version/index.js -o ./.github/actions/precheck-max-version/dist --license licenses.txt",
+        "build": "yarn build-legacy-versions & yarn build-precheck-max-version",
+        "lint": "d2-style check",
+        "format": "d2-style apply"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JoakimSM/action-applicable-released-versions.git"
+    },
+    "keywords": [
+        "frontend",
+        "github-action"
+    ],
+    "author": "Joakim Storloekken Melseth",
+    "license": "BSD-3-Clause",
+    "bugs": {
+        "url": "https://github.com/JoakimSM/action-applicable-released-versions/issues"
+    },
+    "homepage": "https://github.com/JoakimSM/action-applicable-released-versions#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "@actions/core": "^1.9.1",
+        "@dhis2/cli-style": "^10.4.1",
+        "@vercel/ncc": "^0.34.0"
+    }
+}
