@@ -18,7 +18,7 @@ try {
 
     const versions = []
     for (let index = minMinorVersion; index < devMinorVersion; index++) {
-        versions.push(`${majorVersion}.${index}`)
+        versions.push(`${index}`)
     }
     core.info(`output-versions: ${JSON.stringify(versions)}`)
     core.setOutput('versions', versions)
