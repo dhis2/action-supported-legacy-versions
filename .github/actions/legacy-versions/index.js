@@ -10,11 +10,12 @@ try {
     )
     const { minDHIS2Version } = require(configPath)
 
-    const majorVersion = /^\d+/.exec(latestVersion)[0]
-
     const minorVersionRegex = /[.](\d+)/
     const minMinorVersion = Number(minorVersionRegex.exec(minDHIS2Version)[1])
     const devMinorVersion = Number(minorVersionRegex.exec(latestVersion)[1])
+
+    core.info(`minMinorVersion: ${minMinorVersion}`)
+    core.info(`devMinorVersion: ${devMinorVersion}`)
 
     const versions = []
     for (let index = minMinorVersion; index < devMinorVersion; index++) {
